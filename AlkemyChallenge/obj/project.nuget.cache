@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nCGRqY8u4bSMk4kgItci0KsQuvokWZRSWFSCtc8HcAKd6YYobpQqYMxjDt9kNL4fR1ZIfzyzqOoDvvGjJKXy1A==",
+  "dgSpecHash": "3XHMzEPTUEQgOJ4nWXS3Ir721ME7Ru+0x4rtiMjt1Y1ba/xIdZTMUdNbCKMgwAYhIYENukABQI8mW7K4XiGOQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Liam\\Desktop\\Proyecto C#\\AlkemyChallenge\\AlkemyChallenge.csproj",
+  "projectFilePath": "C:\\Users\\Liam\\Desktop\\Challenge_Alkemy.Net\\AlkemyChallenge\\AlkemyChallenge.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Liam\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Liam\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

@@ -10,7 +10,9 @@ namespace AlkemyChallenge.Data
     {
         public static void Inicio(DbContextAlkemy context)
         {
+            //context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
+            
 
             if (context.Personajes.Any())
             {
@@ -30,6 +32,11 @@ namespace AlkemyChallenge.Data
             }
             context.SaveChanges();
 
+            if (context.Generos.Any())
+            {
+                return;
+            }
+
             var generos = new Genero[]
             {
                 new Genero{GeneroID=1,Nombre="Aventuras",Imagen="noImagen"},
@@ -43,6 +50,10 @@ namespace AlkemyChallenge.Data
             }
             context.SaveChanges();
 
+            if (context.Peliculas.Any())
+            {
+                return;
+            }
             var peliculas = new Pelicula[]
             {
                 new Pelicula{PeliculaID=5,Imagen="no", Titulo= "Mickey y sus Aventuras",Calificacion=10,FechaDeCreacion=DateTime.Parse("2021-05-05")},
@@ -57,6 +68,21 @@ namespace AlkemyChallenge.Data
             context.SaveChanges();
 
 
+            if (context.Usuarios.Any())
+            {
+                return;
+            }
+
+            var usuarios = new Login[]
+            {
+                new Login{Nombre = "Juan",Pass="1234"},
+                new Login{Nombre="Carlos",Pass="lala"}
+            };
+            foreach(Login l in usuarios)
+            {
+                context.Usuarios.Add(l);
+            }
+            context.SaveChanges();
 
 
 
