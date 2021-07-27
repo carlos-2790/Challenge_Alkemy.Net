@@ -8,16 +8,20 @@ using Microsoft.EntityFrameworkCore;
 using AlkemyChallenge.Data;
 using AlkemyChallenge.Models;
 using DbContextAlkemy = AlkemyChallenge.Data.DbContextAlkemy;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace AlkemyChallenge.Controllers
 {
     public class GeneroController : Controller
     {
         private readonly DbContextAlkemy _context;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public GeneroController(DbContextAlkemy context)
+        public GeneroController(DbContextAlkemy context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            _hostEnvironment = hostEnvironment;
         }
 
         // GET: Genero
@@ -55,10 +59,19 @@ namespace AlkemyChallenge.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("GeneroID,Nombre,Imagen")] Genero genero)
+        public async Task<IActionResult> Create([Bind("GeneroID,Nombre,NombreImagen,ImagenFile")] Genero genero)
         {
             if (ModelState.IsValid)
             {
+
+                //guarda imagen en la carpeta wwwRooth/Image
+                string wwwRoothPath = Path.Combine(_hostEnvironment.WebRootPath, "Image");
+                string fileName = genero.NombreImagen;
+                string path = Path.Combine(wwwRoothPath, fileName);
+                using(var filStream = new FileStream(path, FileMode.Create))
+                {
+                    await genero.ImagenFile.CopyToAsync(filStream);
+                }
                 _context.Add(genero);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -87,7 +100,7 @@ namespace AlkemyChallenge.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("GeneroID,Nombre,Imagen")] Genero genero)
+        public async Task<IActionResult> Edit(int id, [Bind("GeneroID,Nombre,NombreImagen")] Genero genero)
         {
             if (id != genero.GeneroID)
             {

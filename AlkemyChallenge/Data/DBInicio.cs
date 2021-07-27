@@ -37,9 +37,9 @@ namespace AlkemyChallenge.Data
                 return;
             }
 
-            var generos = new Genero[]
+            /*var generos = new Genero[]
             {
-                new Genero{GeneroID=1,Nombre="Aventuras",Imagen="noImagen"},
+                new Genero{GeneroID=1,Nombre="Aventuras",Imagen="noImagen",NombreImagen=""},
                 new Genero{GeneroID=2,Nombre="Policiales",Imagen="noImagen"},
                 new Genero{GeneroID=3,Nombre="Comedia",Imagen="noImagen"},
                 new Genero{GeneroID=4,Nombre="Suspenso",Imagen="noImagen"}
@@ -48,7 +48,7 @@ namespace AlkemyChallenge.Data
             {
                 context.Generos.Add(g);
             }
-            context.SaveChanges();
+            context.SaveChanges();*/
 
             if (context.Peliculas.Any())
             {

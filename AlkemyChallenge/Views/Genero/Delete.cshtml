@@ -11,23 +11,29 @@
     <h4>Genero</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nombre)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nombre)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Imagen)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreImagen)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Imagen)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NombreImagen)
+        </dd>
+        <dt class="col-sm-2">
+           Imagen Cargada
+        </dt>
+        <dd class="col-sm-10">
+           <img src="@("~/Image"+Model.NombreImagen)" asp-append-version="true"width="250px" height="250px"/>
         </dd>
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="GeneroID" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>
 </div>

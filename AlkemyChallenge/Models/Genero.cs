@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,16 +10,20 @@ namespace AlkemyChallenge.Models
 {
     public class Genero
     {
-       /* private int generoID;
-        private string nombre;
-        private string imagen;*/
+       
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DisplayName("ID")]
         public int GeneroID { get; set; }
         public string Nombre { get; set; }
-        public string Imagen { get; set; }
+        //public string Imagen { get; set; }
+        [DisplayName("Nombre Imagen")]
+        public string NombreImagen { get; set; }
 
-        public ICollection<Genero> Generos { get; set; }
+        [NotMapped]
+        [DisplayName ("Cargar Imagen")]
+        public IFormFile ImagenFile { get; set; }
+        //public ICollection<Genero> Generos { get; set; }
 
 
 

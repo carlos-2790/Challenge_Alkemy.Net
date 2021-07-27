@@ -308,11 +308,6 @@ C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\scop
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\AlkemyChallenge.TagHelpers.input.cache
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\AlkemyChallenge.TagHelpers.output.cache
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\AlkemyChallenge.RazorCoreGenerate.cache
-C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Genero\Create.cshtml.g.cs
-C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Genero\Delete.cshtml.g.cs
-C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Genero\Details.cshtml.g.cs
-C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Genero\Edit.cshtml.g.cs
-C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Genero\Index.cshtml.g.cs
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Pelicula\Create.cshtml.g.cs
@@ -343,3 +338,8 @@ C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razo
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Login\Details.cshtml.g.cs
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Login\Edit.cshtml.g.cs
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Genero\Create.cshtml.g.cs
+C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Genero\Delete.cshtml.g.cs
+C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Genero\Details.cshtml.g.cs
+C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Genero\Edit.cshtml.g.cs
+C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Genero\Index.cshtml.g.cs
