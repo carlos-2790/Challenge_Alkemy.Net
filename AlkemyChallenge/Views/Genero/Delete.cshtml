@@ -1,33 +1,34 @@
 ﻿@model AlkemyChallenge.Models.Genero
 
+
 @{
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
+<h1>Eliminar Genero</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Esta segura/o que desea eliminar?</h3>
 <div>
-    <h4>Genero</h4>
+    
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
+            Nombre
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nombre)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NombreImagen)
+           Nombre Imagen
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.NombreImagen)
         </dd>
         <dt class="col-sm-2">
-           Imagen Cargada
+           Imagen:
         </dt>
         <dd class="col-sm-10">
-           <img src="@("~/Image"+Model.NombreImagen)" asp-append-version="true"width="250px" height="250px"/>
+           <img src="@("~/Image/"+Model.NombreImagen)" asp-append-version="true"width="150px" height="150px"/>
         </dd>
     </dl>
     

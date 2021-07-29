@@ -14,7 +14,7 @@ namespace AlkemyChallenge.Data
             context.Database.EnsureCreated();
             
 
-            if (context.Personajes.Any())
+           /* if (context.Personajes.Any())
             {
                 return;
             }
@@ -37,7 +37,7 @@ namespace AlkemyChallenge.Data
                 return;
             }
 
-            /*var generos = new Genero[]
+            var generos = new Genero[]
             {
                 new Genero{GeneroID=1,Nombre="Aventuras",Imagen="noImagen",NombreImagen=""},
                 new Genero{GeneroID=2,Nombre="Policiales",Imagen="noImagen"},
@@ -48,7 +48,7 @@ namespace AlkemyChallenge.Data
             {
                 context.Generos.Add(g);
             }
-            context.SaveChanges();*/
+            context.SaveChanges();
 
             if (context.Peliculas.Any())
             {
@@ -82,7 +82,7 @@ namespace AlkemyChallenge.Data
             {
                 context.Usuarios.Add(l);
             }
-            context.SaveChanges();
+            context.SaveChanges();*/
 
 
 

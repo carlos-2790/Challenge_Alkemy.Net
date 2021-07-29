@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,13 +11,27 @@ namespace AlkemyChallenge.Models
     {
               
         public int ID { get; set; }
+        [Required(ErrorMessage = "Por favor Ingrese el Imagen... ")]
+        [DisplayName("Imagen ")]
         public string Imagen { get; set; }
+
+        [Required(ErrorMessage = "Por favor Ingrese el Nombre... ")]
+        [DisplayName("Nombre ")]
         public string Nombre { get; set; }
+
+        [Required(ErrorMessage = "Por favor Ingrese el Edad... ")]
+        [DisplayName("Edad")]
         public string Edad { get; set; }
+
+        [Required(ErrorMessage = "Por favor Ingrese el Peso... ")]
+        [DisplayName("Peso")]
         public int Peso { get; set; }
+
+        [Required(ErrorMessage = "Por favor Ingrese el Historia... ")]
+        [DisplayName("Historia")]
         public string Historia { get; set; }
 
-        public ICollection<Personaje> Personajes { get; set; }
+        public List<Pelicula> Peliculas { get; set; }
         
        
 

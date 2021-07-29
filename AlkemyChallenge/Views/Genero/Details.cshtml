@@ -10,17 +10,20 @@
     <h4>Genero</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
+        <dt class="col-sm-2">
+            Nombre
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nombre)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NombreImagen)
+        <dt class="col-sm-2">
+            Nombre de la Imagen
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.NombreImagen)
+        </dd>
+        <dd class="col-sm-10">
+            <img src="@("~/Image/"+Model.NombreImagen)" asp-append-version="true" width="150px" height="150px" />
         </dd>
     </dl>
 </div>

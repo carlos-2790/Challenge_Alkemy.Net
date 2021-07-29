@@ -31,6 +31,9 @@
                 @Html.DisplayFor(modelItem => item.NombreImagen)
             </td>
             <td>
+                <img src="@("~/Image/"+item.NombreImagen)" asp-append-version="true" width="50px" height="50px" />
+            </td>
+            <td>
                 <a asp-action="Edit" asp-route-id="@item.GeneroID">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.GeneroID">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.GeneroID">Delete</a>

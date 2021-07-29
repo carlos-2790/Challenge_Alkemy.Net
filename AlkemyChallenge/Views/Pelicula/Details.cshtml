@@ -4,36 +4,44 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Detalle</h1>
+<h1>Details</h1>
 
 <div>
     <h4>Pelicula</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Imagen)
+
+        <dt class="col-sm-2">
+           Titulo
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Imagen)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Titulo)
-        </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Titulo)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaDeCreacion)
+        <dt class="col-sm-2">
+            Fecha de Estreno
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.FechaDeCreacion)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Calificacion)
+        <dt class="col-sm-2">
+            Calificacion
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Calificacion)
         </dd>
+        <dt class="col-sm-2">
+            Nombre de la Imagen
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ImagenNombre)
+        </dd>
+        
+        <dd class="col-sm-10">
+            <img src="@("~/Image/"+Model.ImagenNombre)" asp-append-version="true" width="150px" height="150px" />
+        </dd>
+
+
+
     </dl>
 </div>
 <div>

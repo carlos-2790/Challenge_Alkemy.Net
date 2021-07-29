@@ -4,24 +4,15 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Agregar</h1>
+<h1>Create</h1>
 
 <h4>Pelicula</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="PeliculaID" class="control-label"></label>
-                <input asp-for="PeliculaID" class="form-control" />
-                <span asp-validation-for="PeliculaID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Imagen" class="control-label"></label>
-                <input asp-for="Imagen" class="form-control" />
-                <span asp-validation-for="Imagen" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 <label asp-for="Titulo" class="control-label"></label>
                 <input asp-for="Titulo" class="form-control" />
@@ -36,6 +27,16 @@
                 <label asp-for="Calificacion" class="control-label"></label>
                 <input asp-for="Calificacion" class="form-control" />
                 <span asp-validation-for="Calificacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagenNombre" class="control-label">Nombre de Imagen</label>
+                <input asp-for="ImagenNombre" class="form-control" />
+                <span asp-validation-for="ImagenNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagenFile" class="control-label">Nombre de Imagen</label>
+                <input asp-for="ImagenFile"  accept="image/*" />
+                <span asp-validation-for="ImagenFile" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

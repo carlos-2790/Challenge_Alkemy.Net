@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,31 +11,25 @@ namespace AlkemyChallenge.Models
 {
     public class Genero
     {
-       
-
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [DisplayName("ID")]
+             
+        
+        [ForeignKey("ID")]
         public int GeneroID { get; set; }
+
+        [Required(ErrorMessage = "Por favor Ingrese el Nombre... ")]
+        [DisplayName("Nombre ")]
         public string Nombre { get; set; }
-        //public string Imagen { get; set; }
+
+        [Required(ErrorMessage = "Por favor Ingrese el Nombre... ")]
         [DisplayName("Nombre Imagen")]
         public string NombreImagen { get; set; }
+
+        public List<Pelicula> Peliculas { get; set; }
 
         [NotMapped]
         [DisplayName ("Cargar Imagen")]
         public IFormFile ImagenFile { get; set; }
-        //public ICollection<Genero> Generos { get; set; }
-
-
-
-
-       /* public Genero(string nombre, string imagen, int generoId)
-        {
-            this.nombre = nombre;
-            this.imagen = imagen;
-            this.generoID = generoId;
-        }*/
-
+              
 
     }
 }

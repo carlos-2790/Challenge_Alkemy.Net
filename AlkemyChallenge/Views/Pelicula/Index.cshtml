@@ -7,22 +7,20 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Agregar Pelicula</a>
+    <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            
             <th>
-                @Html.DisplayNameFor(model => model.Imagen)
+                Titulo
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Titulo)
+                Fecha de Estreno
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FechaDeCreacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Calificacion)
+                Calificacion
             </th>
             <th></th>
         </tr>
@@ -31,9 +29,6 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Imagen)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Titulo)
             </td>
             <td>
@@ -41,6 +36,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Calificacion)
+            </td>
+            <td>
+                <img src="@("~/Image/"+item.ImagenNombre)" asp-append-version="true" width="50px" height="50px" />
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.PeliculaID">Edit</a> |

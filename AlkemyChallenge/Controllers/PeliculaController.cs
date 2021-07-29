@@ -8,16 +8,20 @@ using Microsoft.EntityFrameworkCore;
 using AlkemyChallenge.Data;
 using AlkemyChallenge.Models;
 using DbContextAlkemy = AlkemyChallenge.Data.DbContextAlkemy;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace AlkemyChallenge.Controllers
 {
     public class PeliculaController : Controller
     {
         private readonly DbContextAlkemy _context;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public PeliculaController(DbContextAlkemy context)
+        public PeliculaController(DbContextAlkemy context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            _hostEnvironment = hostEnvironment;
         }
 
         // GET: Pelicula
@@ -55,10 +59,22 @@ namespace AlkemyChallenge.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PeliculaID,Imagen,Titulo,FechaDeCreacion,Calificacion")] Pelicula pelicula)
+        public async Task<IActionResult> Create([Bind("PeliculaID,ImagenNombre,Titulo,FechaDeCreacion,Calificacion,ImagenFile")] Pelicula pelicula)
         {
             if (ModelState.IsValid)
             {
+                string wwwRoothPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(pelicula.ImagenNombre);
+                string extension = Path.GetExtension(pelicula.ImagenFile.FileName);
+                pelicula.ImagenNombre = fileName = fileName + extension;
+                string path = Path.Combine(wwwRoothPath + "/Image/", fileName);
+
+                /*string fileName = genero.NombreImagen;
+                string path = Path.Combine(wwwRoothPath, fileName);*/
+                using (var filStream = new FileStream(path, FileMode.Create))
+                {
+                    await pelicula.ImagenFile.CopyToAsync(filStream);
+                }
                 _context.Add(pelicula);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -87,7 +103,7 @@ namespace AlkemyChallenge.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PeliculaID,Imagen,Titulo,FechaDeCreacion,Calificacion")] Pelicula pelicula)
+        public async Task<IActionResult> Edit(int id, [Bind("PeliculaID,ImagenNombre,Titulo,FechaDeCreacion,Calificacion")] Pelicula pelicula)
         {
             if (id != pelicula.PeliculaID)
             {

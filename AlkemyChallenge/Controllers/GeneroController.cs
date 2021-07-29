@@ -65,9 +65,14 @@ namespace AlkemyChallenge.Controllers
             {
 
                 //guarda imagen en la carpeta wwwRooth/Image
-                string wwwRoothPath = Path.Combine(_hostEnvironment.WebRootPath, "Image");
-                string fileName = genero.NombreImagen;
-                string path = Path.Combine(wwwRoothPath, fileName);
+                string wwwRoothPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(genero.NombreImagen);
+                string extension = Path.GetExtension(genero.ImagenFile.FileName);
+                genero.NombreImagen = fileName = fileName + extension;
+                string path = Path.Combine(wwwRoothPath + "/Image/", fileName);
+                
+                /*string fileName = genero.NombreImagen;
+                string path = Path.Combine(wwwRoothPath, fileName);*/
                 using(var filStream = new FileStream(path, FileMode.Create))
                 {
                     await genero.ImagenFile.CopyToAsync(filStream);

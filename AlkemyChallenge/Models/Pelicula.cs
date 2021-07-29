@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,32 +11,28 @@ namespace AlkemyChallenge.Models
 {
     public class Pelicula
     {
-      /*  public int peliculaID;
-        public string imagen;
-        public string titulo;
-        public DateTime fechaDeCreacion;
-        public int calificacion;*/
-
-
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [ForeignKey("ID" + "GeneroID")]
         public int PeliculaID { get; set; }
-        public string Imagen { get; set; }
+               
+        [Required(ErrorMessage = "Por favor Ingrese el nombre de la Imagen... ")]
+        [DisplayName("Nombre de Imagen")]
+        public string ImagenNombre { get; set; }
+
+        [Required(ErrorMessage = "Por favor Ingrese el Titulo... ")]
+        [DisplayName("Titulo")]
         public string Titulo { get; set; }
+
+        [Required(ErrorMessage = "Por favor Ingrese la Fecha... ")]
+        [DisplayName("Fecha Estreno")]
         public DateTime FechaDeCreacion { get; set; }
         public int Calificacion { get; set; }
 
-        public ICollection<Pelicula> Peliculas { get; set; }
+        [NotMapped]
+        [DisplayName("Cargar Imagen")]
+        public IFormFile ImagenFile { get; set; }
 
+       
 
-
-      /*  public Pelicula(string imagen, string titulo, DateTime fechaDeCreacion, int calificacion, int peliculaID)
-        {
-            this.imagen = imagen;
-            this.titulo = titulo;
-            this.fechaDeCreacion = fechaDeCreacion;
-            this.calificacion = calificacion;
-            this.peliculaID = peliculaID;
-        }*/
 
 
     }
