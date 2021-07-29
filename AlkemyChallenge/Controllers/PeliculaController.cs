@@ -68,9 +68,7 @@ namespace AlkemyChallenge.Controllers
                 string extension = Path.GetExtension(pelicula.ImagenFile.FileName);
                 pelicula.ImagenNombre = fileName = fileName + extension;
                 string path = Path.Combine(wwwRoothPath + "/Image/", fileName);
-
-                /*string fileName = genero.NombreImagen;
-                string path = Path.Combine(wwwRoothPath, fileName);*/
+                               
                 using (var filStream = new FileStream(path, FileMode.Create))
                 {
                     await pelicula.ImagenFile.CopyToAsync(filStream);

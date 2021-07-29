@@ -301,11 +301,6 @@ C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Alke
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\AlkemyChallenge.RazorCoreGenerate.cache
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Personaje\Create.cshtml.g.cs
-C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Personaje\Delete.cshtml.g.cs
-C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Personaje\Details.cshtml.g.cs
-C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Personaje\Edit.cshtml.g.cs
-C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Personaje\Index.cshtml.g.cs
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -334,3 +329,8 @@ C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razo
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Pelicula\Details.cshtml.g.cs
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Pelicula\Edit.cshtml.g.cs
 C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Pelicula\Index.cshtml.g.cs
+C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Personaje\Create.cshtml.g.cs
+C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Personaje\Delete.cshtml.g.cs
+C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Personaje\Details.cshtml.g.cs
+C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Personaje\Edit.cshtml.g.cs
+C:\Users\Liam\Desktop\Challenge_Alkemy.Net\AlkemyChallenge\obj\Debug\net5.0\Razor\Views\Personaje\Index.cshtml.g.cs
